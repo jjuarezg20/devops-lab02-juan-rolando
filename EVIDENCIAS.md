@@ -26,7 +26,7 @@ Ruleset `Proteger main` (activo, rama `main`, sin bypass): exige pull request y 
 
 - Ejecución: https://github.com/jjuarezg20/devops-lab02-juan-rolando/actions/runs/36167395151
 - Commit: `9b4e4f7179194022d0e5c5a3430374c85e7bb3c2`
-- Cambio que provocó el fallo: se agregó el archivo temporal `app/tmp_lint_failure.py` con `import os` sin utilizar. Ruff reportó `F401 [*] \ imported but unused`.
+- Cambio que provocó el fallo: se agregó el archivo temporal `app/tmp_lint_failure.py` con `import os` sin utilizar. Ruff reportó ``F401 [*] `os` imported but unused``.
 - Resultado: **Lint ❌ · Test ✅ · Container ⏭️ skipped** (no se ejecutó por `needs`).
 - Merge bloqueado: el PR #1 quedó en estado `BLOCKED` (`gh pr view 1 --json mergeStateStatus`) porque el check requerido Lint falló.
 - Corrección: el archivo temporal se eliminó en el commit `fix: elimina violación temporal de Ruff` del mismo PR.
